@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalender</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+
+    <script src="./js/main.js"></script>
+    <script src="./js/today.js"></script>
+    <script src="./js/todos.js"></script>
+    <script src="./js/calendar.js"></script>
+    
+    <script src="https://kit.fontawesome.com/a0ffb296ea.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+    <div class="body-container flex margin-top">
+      <aside>
+        <div class="date-and-time border-radius">
+          <p>date and time</p>
+        </div>
+        <div class="planning-container border-radius">
+          <div class="container">
+            <div class="aside-container">
+                <!-- Lägg till TODO startar här -->
+                <div class="todo-list">
+                    <h3 class="planing-header">Planering</h3>
+                    <div class="planing-options-today-all-container">
+                        <div id="todayAndChoosenDayTodo" class="todays-date-todo-option">
+                          <button onclick="showTodayTodo()">Vald dag</button>
+                        </div>
+                        <div class="line-between-h4"></div>
+                        <div id="allTodo" class="all-dates-todo-option">
+                          <a href="#0">
+                            <button onclick="showAllTodo()">Alla Todo</button>
+                          </a>
+                        </div>
+                        
+                    </div>
+  
+                    <!-- lägg till todo startar här -->
+                        
+                    <!-- Lägg till slutar här -->
+    
+                    <!-- Tilllagda todo startar här -->
+                    <div class="todo-content-container">
+                        <div id="todayTodoContent" class="todo-content-today">
+                            <div class="todo-input-container">
+                              <div class="today">
+                                <ul class="list listActive " id="todayInput">
+                                  <li></li>
+                                </ul>
+                              </div>
+                              <!-- gamla todo dummies 
+                                <input type="text" readonly>
+                                <button><i class="fa-regular fa-pen-to-square"></i></button>
+                                <button><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                            <div class="todo-input-container">
+                                <input type="text" readonly>
+                                <button><i class="fa-regular fa-pen-to-square"></i></button>
+                                <button><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                            <div class="todo-input-container">
+                                <input type="text" readonly>
+                                <button><i class="fa-regular fa-pen-to-square"></i></button>
+                                <button><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                            -->
+                            
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Tillagda todo alla todos -->
+                    <div id="allTodoContent" class="todo-content-container-all">
+                        <div class="todo-input-container">
+                          <div class="tomorrow">
+                            <ul class="list" id="tomorrow">
+                              <li></li>
+                            </ul>
+                          </div>                                                   
+                        </div>                       
+                    </div>
+                    <!-- lägg till todo startar här -->
+                    <div class="todo-input-container-add-todo">
+                      <div class="add-todo-section-start">
+                        <input type="text" id="item">
+                        <br>
+                        <div class="todo-form">
+                          <input type="text" class="input js-todo-description">
+                          <input type="date" id="date">
+                          <button class="button js-add-todo">Add</button>
+                        </div>                                          
+                        <button onclick="newTodo()" class="button-add-todo"><input type="button" value="Lägg till" id="todayInput"></button>
+                        <!-- <button onclick="removeTodo()"><input type="button" value="Ta bort" id="removeButton"></button> -->
+                      </div>
+                      <!-- 
+                      <input class="todo-input-field" id="todo-input-field" type="text" placeholder="Lägg till todo">
+                      <label for="start">Välj datum:</label>
+
+                      <input type="date" id="start" name="trip-start"
+                      value="2018-07-22"
+                      min="2018-01-01" max="2018-12-31">
+                      <input class="submit-button" type="submit" value="Lägg till"/>
+                       -->
+                  </div>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+      </aside>
+      
+      <div class="header-and-main-container">
+        <header>
+          <div class="date-and-time-mobile">
+            <p>date-and-time</p>
+          </div>
+          <div class="title-header">
+            <h1>Kalender</h1>
+          </div>
+        </header>
+
+        <main class="border-radius">
+          <p>calendar</p>
+        </main>
+      </div>
+  </div>
+
+  </body>
+</html>
